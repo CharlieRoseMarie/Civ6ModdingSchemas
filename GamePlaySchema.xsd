@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid Studio 2019 (https://www.liquid-technologies.com)-->
 <xs:schema xmlns="https://www.w3schools.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="GameData">
         <xs:complexType>
