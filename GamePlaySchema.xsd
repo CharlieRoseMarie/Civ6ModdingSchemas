@@ -85,6 +85,24 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="Religions" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="ReligionType" />
+                                        <xs:element name="Name" />
+                                        <xs:element name="IconString" />
+                                        <xs:element name="Pantheon" minOccurs="0" />
+                                        <xs:element name="RequiresCustomName" />
+                                        <xs:element name="Color" />
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:all>
         </xs:complexType>
     </xs:element>
