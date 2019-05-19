@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" 
+    xmlns="https://www.w3schools.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="GameData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Types">
+                    <xs:sequence>
+                            <xs:element name="row">
+                                <xs:complexType>
+                                    <xs:attribute name="Type" type="xs:string" />
+                                    <xs:attribute name="Kind" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                    </xs:sequence>
+                </xs:element>
+                <xs:element name="Policies" type="xs:string" />
+                <xs:element name="PolicyModifiers" type="xs:string" />
+                <xs:element name="Modifiers" type="xs:string" />
+                <xs:element name="ModifierArguments" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema> 

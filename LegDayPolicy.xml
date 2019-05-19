@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com GamePlaySchema.xsd">
+	<Types>
+		<Row Type="POLICY_MOD_LEG_DAY" Kind="KIND_POLICY" />
+	</Types>
+	<Policies>
+		<Row PolicyType="POLICY_MOD_LEG_DAY" Name="LOC_POLICY_MOD_LEG_DAY_NAME" Description="LOC_POLICY_MOD_LEG_DAY_DESCRIPTION" PrereqCivic="CIVIC_CODE_OF_LAWS" GovernmentSlotType="SLOT_ECONOMIC" />
+	</Policies>
+	<PolicyModifiers>
+		<Row>
+			<PolicyType>POLICY_MOD_LEG_DAY</PolicyType>
+			<ModifierId>POLICY_MOD_LEG_DAY_MODIFIER</ModifierId> 
+		</Row>
+	</PolicyModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>POLICY_MOD_LEG_DAY_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>POLICY_MOD_LEG_DAY_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value> 
+		</Row>
+	</ModifierArguments>
+</GameData>
+
