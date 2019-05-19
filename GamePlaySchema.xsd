@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid Studio 2019 (https://www.liquid-technologies.com)-->
 <xs:schema xmlns="https://www.w3schools.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="GameData">
         <xs:complexType>
-            <xs:sequence>
+            <xs:all>
                 <xs:element name="Types" minOccurs="0">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
                             <xs:element name="Row">
                                 <xs:complexType>
                                     <xs:attribute name="Type" />
@@ -17,7 +18,7 @@
                 </xs:element>
                 <xs:element name="Policies" minOccurs="0">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
                             <xs:element name="Row">
                                 <xs:complexType>
                                     <xs:attribute name="PolicyType" />
@@ -46,7 +47,7 @@
                 </xs:element>
                 <xs:element name="Modifiers" minOccurs="0">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
                             <xs:element name="Row">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -60,7 +61,7 @@
                 </xs:element>
                 <xs:element name="ModifierArguments" minOccurs="0">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
                             <xs:element name="Row">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -73,7 +74,48 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-            </xs:sequence>
+                <xs:element name="Kinds" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:attribute name="Kind" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Religions" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="ReligionType" />
+                                        <xs:element name="Name" />
+                                        <xs:element name="IconString" />
+                                        <xs:element name="Pantheon" minOccurs="0" />
+                                        <xs:element name="RequiresCustomName" />
+                                        <xs:element name="Color" />
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FavoredReligions" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded">
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:attribute name="LeaderType" />
+                                    <xs:attribute name="ReligionType" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
         </xs:complexType>
     </xs:element>
 </xs:schema>
