@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid Studio 2019 (https://www.liquid-technologies.com)-->
 <xs:schema xmlns="https://www.w3schools.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="GameData">
         <xs:complexType>
@@ -31,9 +30,49 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="PolicyModifiers" type="xs:string" minOccurs="0" />
-                <xs:element name="Modifiers" type="xs:string" minOccurs="0" />
-                <xs:element name="ModifierArguments" type="xs:string" minOccurs="0" />
+                <xs:element name="PolicyModifiers" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="PolicyType" />
+                                        <xs:element name="ModifierId" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Modifiers" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ModifierId" />
+                                        <xs:element name="ModifierType" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ModifierArguments" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ModifierId" />
+                                        <xs:element name="Name" />
+                                        <xs:element name="Value" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
