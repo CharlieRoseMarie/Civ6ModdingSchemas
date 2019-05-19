@@ -1,25 +1,40 @@
-<?xml version="1.0"?>
-
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" 
-    xmlns="https://www.w3schools.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid Studio 2019 (https://www.liquid-technologies.com)-->
+<xs:schema xmlns="https://www.w3schools.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="GameData">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Types">
-                    <xs:sequence>
-                            <xs:element name="row">
+                <xs:element name="Types" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Row">
                                 <xs:complexType>
-                                    <xs:attribute name="Type" type="xs:string" />
-                                    <xs:attribute name="Kind" type="xs:string" />
+                                    <xs:attribute name="Type" />
+                                    <xs:attribute name="Kind" />
                                 </xs:complexType>
                             </xs:element>
-                    </xs:sequence>
+                        </xs:sequence>
+                    </xs:complexType>
                 </xs:element>
-                <xs:element name="Policies" type="xs:string" />
-                <xs:element name="PolicyModifiers" type="xs:string" />
-                <xs:element name="Modifiers" type="xs:string" />
-                <xs:element name="ModifierArguments" type="xs:string" />
+                <xs:element name="Policies" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Row">
+                                <xs:complexType>
+                                    <xs:attribute name="PolicyType" />
+                                    <xs:attribute name="Name" />
+                                    <xs:attribute name="Description" />
+                                    <xs:attribute name="PrereqCivic" />
+                                    <xs:attribute name="GovernmentSlotType" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PolicyModifiers" type="xs:string" minOccurs="0" />
+                <xs:element name="Modifiers" type="xs:string" minOccurs="0" />
+                <xs:element name="ModifierArguments" type="xs:string" minOccurs="0" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-</xs:schema> 
+</xs:schema>
